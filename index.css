@@ -16,7 +16,6 @@ body{
 }
 #header{
     width: 100%;
-    height: 100vh;
     background-size: cover;
     background-position:center;
 }
@@ -26,24 +25,27 @@ body{
 }
 nav{
     display: flex;
-    /* background-color: #b52583; */
+    background-color: black;
     width: 100%;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-   padding: 5px 10%;
+   padding: 20px 10%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
 }
 
-nav.sticky{
-    position: fixed;
+/* nav.sticky{
+   position: fixed;
     top: 0px;
     background-color: black;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     transition: 0.6s;
     z-index: 1;
-}
+} */
 .logo{
-    font-size: 41px;
+    font-size: 30px;
 }
 nav ul li{
     display: inline-block;
@@ -76,12 +78,13 @@ nav ul li a:hover::after{
     width: 100%;
 }
 .header-text{
-    margin-top: 10%;
+    margin: auto;
+    margin-top: 15%;
+    margin-bottom: 15%;
     font-size: 30px;
-    position: absolute;
-    right: 16%;
-    bottom: 3%;
-   
+   /* border: 2px solid white; */
+    width: 50%;
+    
 }
 
 
@@ -96,13 +99,9 @@ nav ul li a:hover::after{
 
 #resume-button-1{
     display: inline-block;
-    /* border: 1px solid #ff004f; */
     text-decoration: none;
     color: #fff;
     background-color: transparent;
-    padding: 10px 20px;
-    margin-bottom: 25px;
-    border-radius: 10px;
     border: none;
 }
 #resume-button-2{
@@ -428,11 +427,11 @@ nav .fas{
     font-size: 25px;
 }
 nav ul {
-    background: #ff004f;
+      background:rgb(17, 17, 17);
     position: fixed;
     top: 0px;
     right: -200px;
-    width:200px;
+    width:180px;
     height:100vh;
     padding-top: 50px;
     z-index: 2;
@@ -440,8 +439,10 @@ nav ul {
 }
 
 nav ul li{
-    display: block;
-    margin: 25px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
 }
 
 nav ul .fas{
@@ -529,11 +530,11 @@ nav .fas{
     font-size: 25px;
 }
 nav ul {
-    background: #ff004f;
+    background:rgb(17, 17, 17);
     position: fixed;
     top: 0px;
     right: -200px;
-    width:200px;
+    width:180px;
     height:100vh;
     padding-top: 50px;
     z-index: 2;
