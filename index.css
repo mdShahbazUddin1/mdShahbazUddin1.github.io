@@ -407,27 +407,21 @@ nav .fas{
     }
 
 .header-text{
-    
-    display: flex;
-    flex-direction: column;
-    margin: 40% auto;
-    height: 50vh;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    position: static;
+    margin: auto;
+    padding-top: 25%;
     font-size: 16px;
-
+    width: 80%;
+    
 }
 .header-text h1{
-    font-size: 30px;
+    font-size: 20px;
 }
 nav .fas{
     display: block;
     font-size: 25px;
 }
 nav ul {
-      background:rgb(17, 17, 17);
+    background:rgb(17, 17, 17);
     position: fixed;
     top: 0px;
     right: -200px;
