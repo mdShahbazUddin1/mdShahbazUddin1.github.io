@@ -274,7 +274,7 @@ transform: scale(1.1);
     border: 2px solid #b54769;
     background-color: #080808;
     padding: 20px;
-  
+  transition: all 0.3s ease-in-out;
 }
 .work:hover{
 transform: scale(1.05);
