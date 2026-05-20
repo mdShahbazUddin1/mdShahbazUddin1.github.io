@@ -50,7 +50,9 @@
   });
 
   /*--/ Star Scrolling nav /--*/
-  $('a.js-scroll[href*="#"]:not([href="#"])').on("click", function () {
+  $('a.js-scroll[href*="#"]:not([href="#"])').on("click", function (e) {
+    e.preventDefault();
+    
     if (
       location.pathname.replace(/^\//, "") ==
         this.pathname.replace(/^\//, "") &&
@@ -58,13 +60,24 @@
     ) {
       var target = $(this.hash);
       target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+      
       if (target.length) {
-        $("html, body").animate(
+        // Close mobile menu first
+        $(".navbar-collapse").collapse("hide");
+        
+        // Smooth scroll to target
+        var targetOffset = target.offset().top - navHeight + 5;
+        
+        $("html, body").stop(true, false).animate(
           {
-            scrollTop: target.offset().top - navHeight + 5,
+            scrollTop: targetOffset,
           },
-          1000,
-          "easeInOutExpo"
+          1200,
+          "easeInOutQuad",
+          function () {
+            // Ensure we're exactly at the target after animation
+            window.history.pushState(null, null, window.location.pathname + "#" + target.attr('id'));
+          }
         );
         return false;
       }
