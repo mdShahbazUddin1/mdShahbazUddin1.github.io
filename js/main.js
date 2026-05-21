@@ -139,4 +139,21 @@
       },
     },
   });
+   $('.resume, #resume-button-2').on('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    var href = $(this).attr('href') || $(this).find('a').attr('href') || './Md_Shahbaz_Uddin__Resume.pdf';
+    
+    // Open in a new tab
+    window.open(href, '_blank');
+    
+    // Force download
+    var link = document.createElement('a');
+    link.href = href;
+    link.download = 'Md_Shahbaz_Uddin_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
 })(jQuery);
